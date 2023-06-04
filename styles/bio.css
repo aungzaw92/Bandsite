@@ -52,6 +52,7 @@ body {
   background-image: url(../assets/images/hero-bio.jpg);
   background-position: 100%;
   background-size: cover;
+  width: 100%;
   display: flex;
 }
 .header__hero-text {
@@ -95,6 +96,10 @@ body {
   color: #ffffff;
   text-decoration: none;
   margin-right: 10px;
+}
+.footer__link-instagram {
+  width: 32px;
+  height: 32px;
 }
 .footer__link:hover {
   text-decoration: underline;
