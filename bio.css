@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("otf"), url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("otf"), url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+}
+body {
+  font-family: "AvenirNextLTPro", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  padding: 0 16px;
+  text-align: center;
+}
+.header__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.header__title {
+  color: #ffffff;
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: bold 700;
+}
+.header__column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.header__link {
+  color: #afafaf;
+  text-decoration: none;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+}
+.header__link:hover {
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+.header__hero {
+  text-align: center;
+  padding: 24px;
+}
+.header__hero img {
+  max-width: 100%;
+}
+.header__hero-bees {
+  background-image: url(../assets/images/hero-bio.jpg);
+  background-position: 100%;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+}
+.header__hero-text {
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.content {
+  padding: 16px;
+}
+.content__section {
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+.content__section-title {
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+}
+.content__section-quote {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold 400;
+  align-items: baseline;
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 16px 16px;
+}
+.footer__row {
+  margin-bottom: 16px;
+}
+.footer__row:first-child, .footer__row:last-child {
+  margin: 24px 0;
+}
+.footer__link {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.footer__link-instagram {
+  width: 32px;
+  height: 32px;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.footer__role, .footer__address, .footer__email {
+  margin-bottom: 16px;
+}
+.footer__copy {
+  font-size: 12px;
+  text-align: left;
+}/*# sourceMappingURL=bio.css.map */
