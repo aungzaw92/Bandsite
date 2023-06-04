@@ -1,0 +1,148 @@
+// Variables
+$primary-color: #ffffff;
+$secondary-color: #323232;
+$tertiary-color: #afafaf;
+
+// Font
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("otf"),
+    url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("otf"),
+    url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+}
+
+body {
+  font-family: "AvenirNextLTPro", sans-serif;
+}
+
+// Header
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary-color;
+  padding: 0 16px;
+  text-align: center;
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: bold 700;
+  }
+
+  &__column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    color: $tertiary-color;
+    text-decoration: none;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    //****************************
+    // TO COME BACK TO
+    //***************************
+    &:hover {
+      color: $primary-color;
+      border-bottom: 3px solid $primary-color;
+    }
+  }
+
+  &__hero {
+    text-align: center;
+    padding: 24px;
+
+    img {
+      max-width: 100%;
+    }
+
+    &-bees {
+      background-image: url(../assets/images/hero-bio.jpg);
+      background-position: 100%;
+      background-size: cover;
+      //   align-items: center;
+      display: flex;
+    }
+
+    &-text {
+      color: $primary-color;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+}
+
+// Content
+.content {
+  padding: 16px;
+
+  &__section {
+    margin-bottom: 16px;
+    margin-top: 24px;
+
+    &-title {
+      margin-bottom: 10px;
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 700;
+    }
+
+    &-quote {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: bold 400;
+      align-items: baseline;
+    }
+  }
+}
+
+// Footer
+.footer {
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 16px 16px;
+
+  &__row {
+    margin-bottom: 16px;
+    &:first-child,
+    &:last-child {
+      margin: 24px 0;
+    }
+  }
+
+  &__link {
+    color: $primary-color;
+    text-decoration: none;
+    margin-right: 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  &__role,
+  &__address,
+  &__email {
+    margin-bottom: 16px;
+  }
+
+  &__copy {
+    font-size: 12px;
+    text-align: left;
+  }
+}
