@@ -1,155 +1,242 @@
-// Variables
-$primary-color: #ffffff;
-$secondary-color: #323232;
-$tertiary-color: #afafaf;
+@use "./partials/variables" as *;
 
-// Font
-@font-face {
-  font-family: "AvenirNextLTPro";
-  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("otf"),
-    url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("otf"),
-    url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+.hero-banner {
+  display: flex;
+  background-image: url("../assets/images/hero-bio.jpg");
+  //   justify-content: center;
+  align-items: center;
+  background-size: cover;
+  min-height: 50vh;
+  &__title {
+    font-family: $bold-font;
+    color: $primary-color;
+    font-size: 24px;
+    padding: 10px;
+    @media screen and (min-width: 1000px) {
+      font-size: 60px;
+      padding: 20px;
+    }
+  }
 }
 
-body {
-  font-family: "AvenirNextLTPro", sans-serif;
-}
-
-// Header
-.header {
+.show-banner {
   display: flex;
   flex-direction: column;
-  background-color: $secondary-color;
-  padding: 0 16px;
-  text-align: center;
-
+  background-image: url("../assets/images/hero-shows.jpg");
+  justify-content: space-around;
+  align-items: left;
+  background-size: cover;
+  min-height: 50vh;
+  padding: 24px 16px 16px 16px;
   &__row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  &__title {
     color: $primary-color;
-    font-size: 60px;
-    line-height: 68px;
-    font-weight: bold 700;
+    margin-bottom: 10px;
+    &-subtitle {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    & h1 {
+      font-family: $bold-font;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: bold 700;
+    }
+    &-title {
+      font-family: $bold-font;
+      color: $primary-color;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: bold 700;
+      padding: 10px;
+      @media screen and (min-width: 768px) {
+        font-size: 60px;
+        line-height: 68px;
+        padding: 20px;
+        font-weight: bold 700;
+      }
+    }
+    &-song {
+      & iframe {
+        width: 100%;
+        height: 166px;
+        border: none;
+      }
+    }
   }
 
-  &__column {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
+  button#playButton {
+    color: white;
+    background-color: #ff5500;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
 
-  &__link {
-    color: $tertiary-color;
-    text-decoration: none;
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: 700;
-    //****************************
-    // TO COME BACK TO
-    //***************************
     &:hover {
-      color: $primary-color;
-      border-bottom: 3px solid $primary-color;
-    }
-  }
-
-  &__hero {
-    text-align: center;
-    padding: 24px;
-
-    img {
-      max-width: 100%;
-    }
-
-    &-bees {
-      background-image: url(../assets/images/hero-bio.jpg);
-      background-position: 100%;
-      background-size: cover;
-      width: 100%;
-      //   height: 650px;
-      display: flex;
-    }
-
-    &-text {
-      color: $primary-color;
-      font-size: 18px;
-      margin-top: 10px;
+      background-color: #ff3300;
     }
   }
 }
 
-// Content
-.content {
-  padding: 16px;
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 
-  &__section {
-    margin-bottom: 16px;
-    margin-top: 24px;
-
-    &-title {
-      margin-bottom: 10px;
-      font-size: 36px;
-      line-height: 44px;
-      font-weight: 700;
-    }
-
-    &-quote {
+  &__img {
+    height: 50vh;
+    width: 100vh;
+    align-items: center;
+    &-caption {
       font-size: 14px;
       line-height: 22px;
-      font-weight: bold 400;
+      font-family: $bold-font;
+      font-weight: 400;
       align-items: baseline;
     }
   }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    &--left {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      &--left {
+        margin-bottom: 0px;
+      }
+    }
+  }
 }
 
-// Footer
-.footer {
-  background-color: $secondary-color;
-  color: $primary-color;
-  padding: 16px 16px;
-
-  &__row {
-    margin-bottom: 16px;
-    &:first-child,
-    &:last-child {
-      margin: 24px 0;
+.gallery {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 36px 36px 36px;
+  &__title {
+    font-family: $bold-font;
+    color: $secondary-color;
+    font-size: 24px;
+  }
+  &__image-container {
+    display: flex;
+    flex-direction: column;
+    &--row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+      & img {
+        height: 25vh;
+        width: 50vh;
+        margin: 5px;
+        @media screen and (min-width: 1000px) {
+          height: 200px;
+          width: 300px;
+        }
+      }
+      @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        margin-left: 100px;
+        margin-right: 100px;
+      }
     }
   }
+  @media (min-width: 768px) {
+    width: auto;
+    padding: 48px 36px 36px 6px;
+  }
+}
 
-  &__link {
-    color: $primary-color;
-    text-decoration: none;
+// Join the conversation section
+
+.comment_section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  &__profile-picture {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
     margin-right: 10px;
+    padding: 24px 16px 16px 16px;
+    justify-content: flex-start;
+  }
+  &__profile-picture-morgan {
+    width: 40px;
+    height: 40px;
+    background-image: url(../assets/logos/Mohan-muruge.jpg);
 
-    &-instagram {
-      width: 32px;
-      height: 32px;
-      //   display: flex;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding: 24px 16px 16px 16px;
+    justify-content: flex-start;
+  }
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  & label {
+    margin-bottom: 5px;
+  }
+  & textarea {
+    height: 10vh;
+    font-family: $regular-font;
+    color: $secondary-color;
+    background-color: $selected-color;
+  }
+  & button {
+    align-self: flex-end;
+    background-color: $secondary-color;
+    color: $primary-color;
+    font-family: $bold-font;
+    padding: 8px 16px;
+    border-radius: 4px;
+    height: 40px;
+    width: 32px;
+    cursor: pointer;
+    @media (min-width: 768px) {
+      padding: 8px 32px;
+      flex-direction: row;
+      width: 150px;
     }
-
     &:hover {
-      text-decoration: underline;
+      background-color: $bandsite-black-color;
     }
   }
+}
 
-  &__name {
-    font-weight: bold;
-    margin-bottom: 4px;
-  }
+.status-updates__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-  &__role,
-  &__address,
-  &__email {
-    margin-bottom: 16px;
-  }
+  .status-update {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 
-  &__copy {
-    font-size: 12px;
-    text-align: left;
+    &__name {
+      font-family: $bold-font;
+      color: $secondary-color;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    &__timestamp {
+      margin-left: auto;
+      color: $tertiary-color;
+    }
+
+    &__text {
+      margin-top: 5px;
+    }
+    padding: 10px;
+    border-bottom: 1px solid $tertiary-color;
   }
 }

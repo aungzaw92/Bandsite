@@ -1,0 +1,97 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 24px 16px 16px 16px;
+}
+.section__show {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+.section__show h1 {
+  font-family: "Avenir Next Bold";
+}
+.section__show-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  margin-bottom: 10px;
+  padding: 16px 0;
+}
+@media (min-width: 768px) {
+  .section__show-info {
+    flex-direction: row;
+  }
+}
+.section__show-info-title {
+  color: #afafaf;
+  font-weight: bold;
+  font-family: "Avenir Next Demi";
+}
+@media (min-width: 768px) {
+  .section__show-info-title {
+    flex-direction: row;
+  }
+}
+.section__show-info-dates {
+  color: #323232;
+  font-family: "Avenir Next Bold";
+  padding: 10px 0;
+}
+@media (min-width: 768px) {
+  .section__show-info-dates {
+    flex-direction: row-reverse;
+  }
+}
+.section__show-info-details {
+  color: #323232;
+  padding: 10px 0;
+}
+@media (min-width: 768px) {
+  .section__show-info-details {
+    flex-direction: row;
+  }
+}
+.section__show-ticket {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  border-bottom: 1px solid #afafaf;
+}
+.section__show-ticket-button {
+  background-color: #323232;
+  color: #ffffff;
+  font-family: "Avenir Next Bold";
+  padding: 8px 32px;
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .section__show-ticket-button {
+    width: auto;
+    padding: 150px;
+    flex-direction: row;
+  }
+}
+.section__show-ticket-button:hover {
+  background-color: #000000;
+}
+@media (min-width: 768px) {
+  .section__show {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  .section {
+    width: auto;
+    padding: 48px 36px 36px 6px;
+  }
+}/*# sourceMappingURL=shows.css.map */

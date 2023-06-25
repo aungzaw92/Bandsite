@@ -1,117 +1,241 @@
-@font-face {
-  font-family: "AvenirNextLTPro";
-  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("otf"), url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("otf"), url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+.hero-banner {
+  display: flex;
+  background-image: url("../assets/images/hero-bio.jpg");
+  align-items: center;
+  background-size: cover;
+  min-height: 50vh;
 }
-body {
-  font-family: "AvenirNextLTPro", sans-serif;
+.hero-banner__title {
+  font-family: "Avenir Next Bold";
+  color: #ffffff;
+  font-size: 24px;
+  padding: 10px;
+}
+@media screen and (min-width: 1000px) {
+  .hero-banner__title {
+    font-size: 60px;
+    padding: 20px;
+  }
 }
 
-.header {
+.show-banner {
   display: flex;
   flex-direction: column;
-  background-color: #323232;
-  padding: 0 16px;
-  text-align: center;
+  background-image: url("../assets/images/hero-shows.jpg");
+  justify-content: space-around;
+  align-items: left;
+  background-size: cover;
+  min-height: 50vh;
+  padding: 24px 16px 16px 16px;
 }
-.header__row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.show-banner__row {
+  color: #ffffff;
   margin-bottom: 10px;
 }
-.header__title {
-  color: #ffffff;
-  font-size: 60px;
-  line-height: 68px;
+.show-banner__row-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+.show-banner__row h1 {
+  font-family: "Avenir Next Bold";
+  font-size: 24px;
+  line-height: 32px;
   font-weight: bold 700;
 }
-.header__column {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-.header__link {
-  color: #afafaf;
-  text-decoration: none;
-  font-size: 36px;
-  line-height: 44px;
-  font-weight: 700;
-}
-.header__link:hover {
+.show-banner__row-title {
+  font-family: "Avenir Next Bold";
   color: #ffffff;
-  border-bottom: 3px solid #ffffff;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold 700;
+  padding: 10px;
 }
-.header__hero {
-  text-align: center;
-  padding: 24px;
+@media screen and (min-width: 768px) {
+  .show-banner__row-title {
+    font-size: 60px;
+    line-height: 68px;
+    padding: 20px;
+    font-weight: bold 700;
+  }
 }
-.header__hero img {
-  max-width: 100%;
-}
-.header__hero-bees {
-  background-image: url(../assets/images/hero-bio.jpg);
-  background-position: 100%;
-  background-size: cover;
+.show-banner__row-song iframe {
   width: 100%;
-  display: flex;
+  height: 166px;
+  border: none;
 }
-.header__hero-text {
-  color: #ffffff;
+.show-banner button#playButton {
+  color: white;
+  background-color: #ff5500;
+  border: none;
+  padding: 10px 20px;
   font-size: 18px;
-  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.show-banner button#playButton:hover {
+  background-color: #ff3300;
 }
 
-.content {
-  padding: 16px;
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
-.content__section {
-  margin-bottom: 16px;
-  margin-top: 24px;
+.about__img {
+  height: 50vh;
+  width: 100vh;
+  align-items: center;
 }
-.content__section-title {
-  margin-bottom: 10px;
-  font-size: 36px;
-  line-height: 44px;
-  font-weight: 700;
-}
-.content__section-quote {
+.about__img-caption {
   font-size: 14px;
   line-height: 22px;
-  font-weight: bold 400;
+  font-family: "Avenir Next Bold";
+  font-weight: 400;
   align-items: baseline;
 }
+.about__content {
+  display: flex;
+  flex-direction: column;
+}
+.about__content--left {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .about__content {
+    flex-direction: row;
+  }
+  .about__content--left {
+    margin-bottom: 0px;
+  }
+}
 
-.footer {
+.gallery {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 36px 36px 36px;
+}
+.gallery__title {
+  font-family: "Avenir Next Bold";
+  color: #323232;
+  font-size: 24px;
+}
+.gallery__image-container {
+  display: flex;
+  flex-direction: column;
+}
+.gallery__image-container--row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.gallery__image-container--row img {
+  height: 25vh;
+  width: 50vh;
+  margin: 5px;
+}
+@media screen and (min-width: 1000px) {
+  .gallery__image-container--row img {
+    height: 200px;
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .gallery__image-container--row {
+    flex-direction: row;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .gallery {
+    width: auto;
+    padding: 48px 36px 36px 6px;
+  }
+}
+
+.comment_section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.comment_section__profile-picture {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 24px 16px 16px 16px;
+  justify-content: flex-start;
+}
+.comment_section__profile-picture-morgan {
+  width: 40px;
+  height: 40px;
+  background-image: url(../assets/logos/Mohan-muruge.jpg);
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 24px 16px 16px 16px;
+  justify-content: flex-start;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+.comment-form label {
+  margin-bottom: 5px;
+}
+.comment-form textarea {
+  height: 10vh;
+  font-family: "Aavenir Next Regular";
+  color: #323232;
+  background-color: #e1e1e1;
+}
+.comment-form button {
+  align-self: flex-end;
   background-color: #323232;
   color: #ffffff;
-  padding: 16px 16px;
+  font-family: "Avenir Next Bold";
+  padding: 8px 16px;
+  border-radius: 4px;
+  height: 40px;
+  width: 32px;
+  cursor: pointer;
 }
-.footer__row {
-  margin-bottom: 16px;
+@media (min-width: 768px) {
+  .comment-form button {
+    padding: 8px 32px;
+    flex-direction: row;
+    width: 150px;
+  }
 }
-.footer__row:first-child, .footer__row:last-child {
-  margin: 24px 0;
+.comment-form button:hover {
+  background-color: #000000;
 }
-.footer__link {
-  color: #ffffff;
-  text-decoration: none;
+
+.status-updates__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.status-updates__list .status-update {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #afafaf;
+}
+.status-updates__list .status-update__name {
+  font-family: "Avenir Next Bold";
+  color: #323232;
+  font-weight: bold;
   margin-right: 10px;
 }
-.footer__link-instagram {
-  width: 32px;
-  height: 32px;
+.status-updates__list .status-update__timestamp {
+  margin-left: auto;
+  color: #afafaf;
 }
-.footer__link:hover {
-  text-decoration: underline;
-}
-.footer__name {
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-.footer__role, .footer__address, .footer__email {
-  margin-bottom: 16px;
-}
-.footer__copy {
-  font-size: 12px;
-  text-align: left;
+.status-updates__list .status-update__text {
+  margin-top: 5px;
 }/*# sourceMappingURL=bio.css.map */
