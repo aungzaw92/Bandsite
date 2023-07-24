@@ -1,0 +1,156 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin background-cover($url) {
+  background-image: url("#{$url}");
+  background-size: cover;
+}
+
+@mixin font-bold($size, $line-height) {
+  font-family: $bold-font;
+  font-size: $size;
+  font-weight: bold 700;
+  line-height: $line-height;
+}
+
+@mixin profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 24px 16px 16px 16px;
+}
+
+@mixin profile-picture-morgan {
+  @include profile-picture;
+  background-image: url(../assets/logos/Mohan-muruge.jpg);
+  justify-content: flex-start;
+}
+
+@mixin textarea-style {
+  height: 50px;
+  font-family: $regular-font;
+  color: $secondary-color;
+  background-color: $selected-color;
+}
+
+@mixin button-style {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font-family: $bold-font;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    padding: 8px 32px;
+    flex-direction: row;
+    width: 150px;
+  }
+
+  &:hover {
+    background-color: $bandsite-black-color;
+  }
+}
+
+@mixin status-update-buttons {
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 5px 10px;
+  border: 1px solid $tertiary-color;
+  cursor: pointer;
+}
+
+@mixin section-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 24px 16px 16px 16px;
+}
+
+@mixin show-info {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-color;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+
+  h1 {
+    font-family: $bold-font;
+  }
+
+  &-info {
+    @include flex-column;
+    justify-content: space-between;
+    align-items: left;
+    margin-bottom: 10px;
+    padding: 16px 0;
+
+    @media (min-width: 768px) {
+      @include flex-row;
+    }
+
+    &-title {
+      color: $tertiary-color;
+      font-weight: bold;
+      font-family: $demi-font;
+      @media (min-width: 768px) {
+        @include flex-row;
+      }
+    }
+
+    &-dates {
+      color: $secondary-color;
+      font-family: $bold-font;
+      padding: 10px 0;
+      @media (min-width: 768px) {
+        @include flex-row-reverse;
+      }
+    }
+
+    &-details {
+      color: $secondary-color;
+      padding: 10px 0;
+      @media (min-width: 768px) {
+        @include flex-row;
+      }
+    }
+  }
+
+  &-ticket {
+    @include flex-center;
+    padding: 10px;
+    border-bottom: 1px solid $tertiary-color;
+
+    &-button {
+      @include button-style;
+      height: 40px;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: auto;
+        padding: 150px;
+        @include flex-row;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    @include flex-row;
+  }
+}

@@ -7,29 +7,27 @@
     <link rel="stylesheet" type="text/css" href="../styles/shows.css" />
     <link rel="stylesheet" type="text/css" href="../styles/bio.css" />
     <link rel="stylesheet" type="text/css" href="../styles/global.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>Document</title>
   </head>
   <body>
     <!-- HEADER -->
-
     <header aria-label="header">
       <div class="logo">BANDSITE</div>
       <nav>
         <ul>
           <li class="header__link">
-            <a href="index.html" class="header__link">Biography</a>
+            <a href="../index.html" class="header__link">Biography</a>
           </li>
           <li class="header__link">
-            <a href="./pages/shows.html" class="header__link">Shows</a>
+            <a href="./shows.html" class="header__link">Shows</a>
           </li>
         </ul>
       </nav>
     </header>
-
     <!-- BODY/ CONTAINER with content -->
     <main class="content">
-      <!--------------------------------------------->
-
       <!-- Hero Banner-->
       <section class="show-banner">
         <div class="show-banner__row">
@@ -48,134 +46,52 @@
               scrolling="no"
               frameborder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/213950659&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1308663292&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+            ></iframe>
+            <div
+              style="
+                font-size: 10px;
+                color: #cccccc;
+                line-break: anywhere;
+                word-break: normal;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+                  Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+                font-weight: 100;
+              "
             >
-            </iframe>
-          </div>
-        </div>
-      </section>
-
-      <!-- Shows section -->
-      <section class="section">
-        <div class="section__show">
-          <h1>Shows</h1>
-          <!-- 1st SHOW -->
-          <div>
-            <div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Date</div>
-                <div class="section__show-info-dates">Mon Sept 06 2021</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Venue</div>
-                <div class="section__show-info-details">Ronald Lane</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Location</div>
-                <div class="section__show-info-details">San Francisco, CA</div>
-              </div>
-              <div class="section__show-ticket">
-                <button class="section__show-ticket-button">Buy Ticket</button>
-              </div>
-            </div>
-
-            <!-- 2nd SHOW -->
-            <div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Date</div>
-                <div class="section__show-info-dates">Tues Sept 21 2021</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Venue</div>
-                <div class="section__show-info-details">Pier 3 East</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Location</div>
-                <div class="section__show-info-details">San Francisco, CA</div>
-              </div>
-              <div class="section__show-ticket">
-                <button class="section__show-ticket-button">Buy Ticket</button>
-              </div>
-            </div>
-            <!-- 3rd SHOW -->
-            <div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Date</div>
-                <div class="section__show-info-dates">Fri Oct 15 2021</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Venue</div>
-                <div class="section__show-info-details">View Lounge</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Location</div>
-                <div class="section__show-info-details">San Francisco, CA</div>
-              </div>
-              <div class="section__show-ticket">
-                <button class="section__show-ticket-button">Buy Ticket</button>
-              </div>
-            </div>
-            <!-- 4th SHOW -->
-            <div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Date</div>
-                <div class="section__show-info-dates">Sat Nov 06 2021</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Venue</div>
-                <div class="section__show-info-details">Hyatt Agency</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Location</div>
-                <div class="section__show-info-details">San Francisco, CA</div>
-              </div>
-              <div class="section__show-ticket">
-                <button class="section__show-ticket-button">Buy Ticket</button>
-              </div>
-            </div>
-            <!-- 5th SHOW -->
-            <div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Date</div>
-                <div class="section__show-info-dates">Fri Nov 16 2021</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Venue</div>
-                <div class="section__show-info-details">Moscow Center</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Location</div>
-                <div class="section__show-info-details">San Francisco, CA</div>
-              </div>
-              <div class="section__show-ticket">
-                <button class="section__show-ticket-button">Buy Ticket</button>
-              </div>
-            </div>
-            <!-- 6th SHOW -->
-            <div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Date</div>
-                <div class="section__show-info-dates">Wed Dec 15 2021</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Venue</div>
-                <div class="section__show-info-details">Press Club</div>
-              </div>
-              <div class="section__show-info">
-                <div class="section__show-info-title">Location</div>
-                <div class="section__show-info-details">San Francisco, CA</div>
-              </div>
-              <div class="section__show-ticket">
-                <button class="section__show-ticket-button">Buy Ticket</button>
-              </div>
+              <a
+                href="https://soundcloud.com/meduzamusic"
+                title="MEDUZA"
+                target="_blank"
+                style="color: #cccccc; text-decoration: none"
+                >MEDUZA</a
+              >
+              ·
+              <a
+                href="https://soundcloud.com/meduzamusic/bad-memories-feat-elley-duhe"
+                title="MEDUZA, James Carter - Bad Memories (feat. Elley Duhé &amp; FAST BOY)"
+                target="_blank"
+                style="color: #cccccc; text-decoration: none"
+                >MEDUZA, James Carter - Bad Memories (feat. Elley Duhé &amp;
+                FAST BOY)</a
+              >
             </div>
           </div>
         </div>
       </section>
+
+      <div class="section__show">
+        <h2>Shows</h2>
+      </div>
+      <div id="eventsContainer"></div>
+
+      <script src="../scripts/build-shows-page.js"></script>
     </main>
 
     <!-- FOOTER -->
-
     <footer class="footer">
       <div class="footer__row">
         <h1>Get in Touch</h1>
@@ -242,7 +158,5 @@
         </p>
       </div>
     </footer>
-
-    <script src="scripts/build-shows-page.js"></script>
   </body>
 </html>

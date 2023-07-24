@@ -1,92 +1,15 @@
 @use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 
 .section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 24px 16px 16px 16px;
+  @include section-style;
 
-  &__show {
-    display: flex;
-    flex-direction: column;
-    background-color: $primary-color;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-
-    & h1 {
-      font-family: $bold-font;
-    }
-
-    &-info {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: left;
-      margin-bottom: 10px;
-      padding: 16px 0;
-
-      @media (min-width: 768px) {
-        flex-direction: row;
-      }
-
-      &-title {
-        color: $tertiary-color;
-        font-weight: bold;
-        font-family: $demi-font;
-        @media (min-width: 768px) {
-          flex-direction: row;
-        }
-      }
-
-      &-dates {
-        color: $secondary-color;
-        font-family: $bold-font;
-        padding: 10px 0;
-        @media (min-width: 768px) {
-          flex-direction: row-reverse;
-        }
-      }
-      &-details {
-        color: $secondary-color;
-        padding: 10px 0;
-        @media (min-width: 768px) {
-          flex-direction: row;
-        }
-      }
-    }
-    &-ticket {
-      display: flex;
-      justify-content: flex-end;
-      padding: 10px;
-      border-bottom: 1px solid $tertiary-color;
-
-      &-button {
-        background-color: $secondary-color;
-        color: $primary-color;
-        font-family: $bold-font;
-        padding: 8px 32px;
-        height: 40px;
-        width: 100%;
-        border-radius: 4px;
-        cursor: pointer;
-        @media (min-width: 768px) {
-          width: auto;
-          padding: 150px;
-          flex-direction: row;
-        }
-        &:hover {
-          background-color: $bandsite-black-color;
-        }
-      }
-    }
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
-  }
   @media (min-width: 768px) {
     width: auto;
     padding: 48px 36px 36px 6px;
+  }
+
+  &__show {
+    @include show-info;
   }
 }
